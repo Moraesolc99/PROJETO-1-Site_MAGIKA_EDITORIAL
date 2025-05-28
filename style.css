@@ -1,0 +1,1152 @@
+p, li {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+.main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+.main-menu li a {
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #e67e22;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+.main-nav a {
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* ============ ESTILOS DO HEADER ============ */
+header {
+    background: linear-gradient(135deg, #FFF9F0 0%, #FFFFFF 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* <- agora centralizado */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-top {
+    background-color: #f8f8f8;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-top-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-main-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    gap: 30px;
+}
+
+.header-logo-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.header-slogan {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.header-whatsapp {
+    margin-left: auto;
+}
+
+/* ====== SEÇÕES CENTRALIZADAS ====== */
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+}
+
+/* ====== FOOTER CENTRALIZADO ====== */
+footer {
+    background: linear-gradient(to bottom, #333333 0%, #222222 100%);
+    color: white;
+}
+
+footer a {
+    color: #ceb31e; /* Um amarelo dourado com bom contraste */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Branco no hover */
+    text-decoration: underline;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: var(--secondary);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    font-size: 0.9rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.logo-area img {
+    max-height: 80px;
+    height: auto;
+    width: auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-img {
+  height: 80px; /* tam Logo */
+  width: auto;
+}
+
+.logo:hover img {
+    transform: scale(1.03); /* Efeito ao passar o mouse */
+}
+
+.slogan {
+    font-size: 0.95rem;
+    font-family: 'Merriweather', serif;
+    color: #555;
+    font-style: italic;
+    margin: 0.5rem 0;
+    text-align: right;
+    flex-grow: 1;
+    padding-right: 2rem;
+}
+
+/* ============ PADRONIZAÇÃO DAS CAPAS ============ */
+.livros-destaque {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.livro-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.livros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cards */
+    gap: 2rem;
+}
+
+/* Container flexível para as capas */
+.capa-container {
+    width: 200px;
+    height: 280px; /* Altura fixa para alinhamento vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo para as imagens das capas */
+.capa-livro {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.livro-card:hover .capa-livro {
+    transform: scale(1.05);
+}
+
+/* Informações do livro */
+.livro-info {
+    width: 100%;
+}
+
+.livro-info h3 {
+    font-family: 'Merriweather', serif;
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.livro-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.sobre {
+    padding: 3rem 2rem;
+    background-color: #faf9f5;
+    text-align: center;
+}
+
+.sobre h2,
+.sobre h3 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.sobre-content p {
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+.servicos-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicos-lista li {
+    font-size: 1.1rem;
+    padding: 0.3rem 0;
+}
+
+.destaques {
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.livros-destaque {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.livro-card {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 220px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.livro-card:hover {
+    transform: scale(1.03);
+}
+
+.capa-livro {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.livro-info {
+    margin-top: 0.8rem;
+}
+
+.livro-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.livro-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.contato {
+    background-color: #f9f9f9;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    color: #444;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contato h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contato-info p {
+    margin: 0.2rem 0;
+    line-height: 1.4;
+}
+
+.contato-info a {
+    color: #444;
+    text-decoration: none;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============ SEÇÃO SERVIÇOS ============ */
+.servicos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.servicos-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.servicos-intro h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.servicos-intro .subtitulo {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid de Serviços */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.servico-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones dos Serviços (imagens centralizadas) */
+.servico-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-bg);
+    border-radius: 50%;
+    padding: 1rem;
+    border: 2px solid var(--secondary);
+}
+
+.servico-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.servico-card h2 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.servico-card p {
+    color: var(--light-text);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.servico-card ul {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.servico-card li {
+    margin-bottom: 0.8rem;
+    color: var(--dark-text);
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.servico-card li::before {
+    content: "•";
+    color: var(--secondary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.btn-servico {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--secondary);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: 1.5rem;
+}
+
+.btn-servico:hover {
+    background: var(--primary);
+}
+
+/* Processo Editorial */
+.processo-editorial {
+    background: var(--light-bg);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.processo-editorial h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.processo-editorial p {
+    color: var(--light-text);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.processo-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.processo-step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.processo-step span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.processo-step h3 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Diferenciais */
+.diferenciais {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.diferenciais h2 {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.diferencial {
+    padding: 1.5rem;
+}
+
+.diferencial img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--secondary);
+    display: block;
+}
+
+.diferencial h3 {
+    color: var(--primary);
+    margin: 1rem 0 0.5rem;
+}
+
+/* CTA */
+.cta-servicos {
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+}
+
+.cta-servicos h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.cta-servicos p {
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-list a.active {
+     color: #d04f8b;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-list li a:hover {
+  background-color: #e0dcd1;
+  color: #000;
+}
+
+.nav-list li a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.whatsapp-btn a {
+    background-color: #25D366;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-btn a:hover {
+    background-color: #1ebe5b;
+    color: white;
+}
+.whatsapp-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filtros button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.filtros button:hover {
+    background-color: #ddd;
+}
+
+.filtros button.ativo {
+    background-color: #aca907;
+    color: white;
+}
+
+.membros {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+margin-top: 20px;
+}
+
+.membro {
+text-align: center;
+max-width: 150px;
+}
+.membro img {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+object-fit: cover;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trabalhe-conosco {
+background-color: #f7fadd;
+padding: 30px;
+margin-top: 50px;
+border-radius: 10px;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.trabalhe-conosco h2 {
+text-align: center;
+}
+
+.trabalhe-conosco form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.trabalhe-conosco input,
+.trabalhe-conosco select,
+.trabalhe-conosco textarea {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.trabalhe-conosco button {
+width: 150px;
+align-self: center;
+padding: 10px;
+background-color: #444;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+:root {
+  --primary: #8B7355; /* Marrom terroso */
+  --secondary: #D4AF37; /* Dourado */
+  --light-bg: #FFF9F0; /* Bege claro */
+  --dark-text: #333333;
+  --light-text: #5A5A5A;
+}
+
+.form-orcamento {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.form-group label {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input, select, textarea {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 12px;
+  transition: border 0.3s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--secondary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.btn-next, .btn-submit {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn-next:hover {
+  background: #C9A227;
+}
+
+.passos-orcamento {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.passo {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.passo::before {
+  content: "✓";
+  background: var(--secondary);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 14px;
+}
+
+.passo.ativo::before {
+  background: var(--primary);
+}
+
+
+.contato-institucional {
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    color: #444;
+}
+
+.contato-institucional {
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    color: #444;
+}
+
+.contato-institucional-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    text-align: center; /* Centraliza conteúdo interno */
+}
+
+.contato-institucional h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.contato-item {
+    flex: 1 1 200px;
+    min-width: 220px;
+    text-align: center; /* Garante centralização individual */
+}
+
+.contato-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #666;
+    text-align: center;
+}
+
+.contato-item p,
+.contato-item a {
+    display: block;
+    text-align: center;
+    color: #444444;
+    text-decoration: none;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+}
+
+.mapa-google {
+    margin-top: 2rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.btn-submit.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+  margin-left: 8px;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (min-width: 1600px) {
+    body {
+        align-items: center;
+    }
+    
+    header, footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        width: 220px;
+    }
+
+    .header-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 992px){
+    .logo {
+        width: 180px;
+        margin-right: 1.5rem;
+    }
+    
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+   .slogan {
+        text-align: left;
+        padding-right: 0;
+        width: 100%;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .nav-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .main-menu {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .whatsapp-btn {
+        width: 100%;
+    }
+    
+    .whatsapp-btn a {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+
+        .header-top {
+        display: none;
+    }
+    
+    .header-main-container {
+        padding: 10px;
+    }
+    
+    .header-logo-nav {
+        gap: 15px;
+    }
+    
+    .logo {
+        width: 160px; /* Tamanho para tablets menores */
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    .whatsapp-btn a {
+        padding: 0.5rem 1rem;
+    }
+    .livro-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-section {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 576px) {
+     .header-logo-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    
+    .header-container {
+        padding: 0.5rem;
+    }
+
+    .main-menu li a {
+        font-size: 0.8rem;
+    }
+
+     nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+    
+    .whatsapp-btn a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .slogan {
+        display: none; /* Opcional: esconde o slogan em mobile */
+    }
+}

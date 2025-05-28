@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIKA EDITORIAL - Solicite um Orçamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="imagens\MagikaEditorial_logo.jpeg" alt="Magika Editorial" class="logo-img"/>
+      </div>
+
+      <div class="header-content">
+        <p class="slogan">Transformando ideias em livros extraordinários desde 2015</p>
+        <nav>
+                <ul class="nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">CATÁLOGO</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="servicos.html">SERVIÇOS</a></li>
+                <li><a href="orcamento.html" class="active">ORÇAMENTO</a></li>
+                <li class="whatsapp-btn">
+                    <a href="https://wa.me/551198765432" target="_blank">
+                        <img src="https://web.whatsapp.com/favicon.ico" alt="WhatsApp" width="20" height="20" />Fale conosco AGORA </a></li>
+            </ul>   
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main>
+        <section class="orcamento">
+            <h1>Solicite um Orçamento</h1>
+            <center><strong>Preencha o formulário abaixo e receba uma proposta personalizada</strong></center>
+            <br>
+            
+            <div class="passos-orcamento">
+                <div class="passo ativo">
+                    <span><p>1 Informações Básicas</span></p>
+                </div>
+                <div class="passo">
+                    <p><span>2 Detalhes do Projeto</span></p>
+                </div>
+                <div class="passo">
+                    <span><p>3 Revisão</p></span>
+                </div>
+                <div class="passo">
+                   <span><p>4 Envio</p></span>
+                </div>
+            </div>
+            
+            <form class="form-orcamento">
+                <div class="form-section active" id="section1">
+                    <h2>Seus Dados</h2>
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Empresa/Instituição</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ (se houver)</label>
+                        <input type="text" id="cnpj" name="cnpj">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn-next" onclick="nextSection(1)">Próximo</button>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="section2">
+                    <h2>Detalhes do Projeto</h2>
+                    
+                    <div class="form-group">
+                        <label for="tipo-projeto">Tipo de Projeto*</label>
+                        <select id="tipo-projeto" name="tipo-projeto" required>
+                            <option value="">Selecione...</option>
+                            <option value="livro">Livro (Autor Individual)</option>
+                            <option value="coletanea">Coletânea</option>
+                            <option value="revista">Revista</option>
+                            <option value="academico">Trabalho Acadêmico</option>
+                            <option value="institucional">Material Institucional</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="titulo">Título da Obra*</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genero">Gênero*</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Selecione...</option>
+                            <option value="literatura">Literatura</option>
+                            <option value="academico">Acadêmico/Científico</option>
+                            <option value="infantil">Infantil</option>
+                            <option value="juvenil">Juvenil</option>
+                            <option value="biografia">Biografia</option>
+                            <option value="negocios">Negócios</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paginas">Número Aproximado de Páginas*</label>
+                        <input type="number" id="paginas" name="paginas" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="formato">Formato Desejado*</label>
+                        <select id="formato" name="formato" required>
+                            <option value="">Selecione...</option>
+                            <option value="14x21">14x21 cm (Padrão)</option>
+                            <option value="16x23">16x23 cm</option>
+                            <option value="outro">Outro (especifique abaixo)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="servicos">Serviços Necessários*</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="servicos" value="revisao"> Revisão de Texto</label>
+                            <label><input type="checkbox" name="servicos" value="diagramacao"> Diagramação</label>
+                            <label><input type="checkbox" name="servicos" value="capa"> Criação de Capa</label>
+                            <label><input type="checkbox" name="servicos" value="isbn"> Registro ISBN</label>
+                            <label><input type="checkbox" name="servicos" value="impressao"> Impressão</label>
+                            <label><input type="checkbox" name="servicos" value="distribuicao"> Distribuição</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Descrição do Projeto*</label>
+                        <textarea id="descricao" name="descricao" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="anexo">Anexar Arquivos (opcional)</label>
+                        <input type="file" id="anexo" name="anexo" multiple>
+                        <p class="hint">Você pode enviar textos, imagens ou referências visuais</p>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn-next" onclick="nextSection(2)">Próximo</button>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="section3">
+                    <h2>Revisão dos Dados</h2>
+                    
+                    <div class="resumo-dados">
+                        <h3>Informações Pessoais</h3>
+                        <p id="resumo-nome"></p>
+                        <p id="resumo-email"></p>
+                        <p id="resumo-telefone"></p>
+                        <p id="resumo-empresa"></p>
+                        
+                        <h3>Detalhes do Projeto</h3>
+                        <p id="resumo-tipo"></p>
+                        <p id="resumo-titulo"></p>
+                        <p id="resumo-genero"></p>
+                        <p id="resumo-paginas"></p>
+                        <p id="resumo-formato"></p>
+                        <p id="resumo-servicos"></p>
+                        <p id="resumo-descricao"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="observacoes">Observações Adicionais</label>
+                        <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prazo">Prazo Desejado para Conclusão</label>
+                        <input type="text" id="prazo" name="prazo" placeholder="Ex: 3 meses, até dezembro/2025">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn-next" onclick="nextSection(3)">Próximo</button>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="section4">
+                    <h2>Confirmação</h2>
+                    
+                    <div class="confirmacao">
+                        <h3>Pronto para enviar sua solicitação?</h3>
+                        <p>Ao clicar em "Enviar Solicitação", você estará enviando seus dados para nossa equipe. Entraremos em contato em até 2 dias úteis com um orçamento detalhado.</p>
+                        <p>Caso precise fazer alguma alteração, utilize os botões "Voltar".</p>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Enviar Solicitação</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+
+            <div class="info-orcamento">
+                <h2>Como Funciona o Processo de Orçamento</h2>
+                <ol>
+                    <li>Você preenche o formulário com os detalhes do seu projeto</li>
+                    <li>Nossa equipe analisa os requisitos e prepara uma proposta</li>
+                    <li>Receberá um orçamento detalhado por email em até 48h</li>
+                    <li>Poderá solicitar ajustes ou confirmar o serviço</li>
+                    <li>Iniciaremos o trabalho após confirmação e pagamento inicial</li>
+                </ol>
+                <br>
+
+                <h3>Dúvidas Frequentes</h3>
+                <div class="faq">
+                    <div class="faq-item">
+                        <h4>Quanto custa publicar um livro?</h4>
+                        <p>O valor varia conforme serviços necessários, número de páginas, tiragem e complexidade do projeto. Nosso orçamento é personalizado para cada obra.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Quanto tempo leva para receber o orçamento?</h4>
+                        <p>Normalmente enviamos a proposta em até 2 dias úteis após recebermos todas as informações necessárias.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Posso solicitar apenas alguns serviços?</h4>
+                        <p>Sim, trabalhamos com serviços avulsos como apenas revisão, apenas diagramação ou apenas impressão, conforme sua necessidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- SEÇÃO DE CONTATO -->
+<section class="contato">
+    <div class="contato-info">
+        <h2>Contato</h2>
+        <p><strong>MAGIKA EDITORIAL</strong></p>
+        <p>Rua José Cardoso Sobrinho, 202<br>Cornélio Procópio/PR - CEP: 86300-144</p>
+        <p>📞 (11) 96269-2261 &nbsp; | &nbsp; ✉️ <a href="mailto:contato@magika.com.br">contato@magika.com.br</a></p>
+    </div>
+</section>
+
+
+        <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <br>
+                <h3>MAGIKA EDITORIAL</h3>
+                <p>Transformando ideias em livros extraordinários</p>
+            </div>
+
+            <div class="footer-section">
+                <br>
+                <h3>Redes Sociais</h3>
+                <br>
+                <a href="https://www.instagram.com/editoraconejo/">Instagram | </a>
+                <a href="https://www.facebook.com/editoraconejo">Facebook | </a>
+                <a href="https://api.whatsapp.com/send?l=pt-BR&phone=5511983442594&text=Olá!%20Eu%20vim%20do%20instagram%20%40editoraconejo"> Whatsapp</a>
+            </div>
+            
+            <div class="footer-section">
+                <br>
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor email">
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p><center>&copy; 2025 Octávio Luís Conejo de Moraes. Todos os direitos reservados.</p></center>
+        </div>
+    </footer>
+</body>
+
+    <script>
+        // Funções para navegação entre seções do formulário
+        function showSection(sectionNumber) {
+            // Esconde todas as seções
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostra a seção desejada
+            document.getElementById('section' + sectionNumber).classList.add('active');
+            
+            // Atualiza os passos
+            document.querySelectorAll('.passo').forEach((passo, index) => {
+                passo.classList.remove('ativo');
+                if (index < sectionNumber) {
+                    passo.classList.add('ativo');
+                }
+            });
+        }
+        
+        function nextSection(currentSection) {
+            // Valida os campos obrigatórios antes de avançar
+            let isValid = true;
+            const currentSectionEl = document.getElementById('section' + currentSection);
+            const requiredFields = currentSectionEl.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                alert('Por favor, preencha todos os campos obrigatórios antes de continuar.');
+                return;
+            }
+            
+            // Atualiza o resumo na seção 3
+            if (currentSection === 2) {
+                updateResumo();
+            }
+            
+            showSection(currentSection + 1);
+        }
+        
+        function prevSection(currentSection) {
+            showSection(currentSection - 1);
+        }
+        
+        function updateResumo() {
+            // Atualiza os dados do resumo
+            document.getElementById('resumo-nome').textContent = 'Nome: ' + document.getElementById('nome').value;
+            document.getElementById('resumo-email').textContent = 'Email: ' + document.getElementById('email').value;
+            document.getElementById('resumo-telefone').textContent = 'Telefone: ' + document.getElementById('telefone').value;
+            document.getElementById('resumo-empresa').textContent = 'Empresa: ' + (document.getElementById('empresa').value || 'Não informado');
+            
+            document.getElementById('resumo-tipo').textContent = 'Tipo: ' + (document.getElementById('tipo-projeto').options[document.getElementById('tipo-projeto').selectedIndex].text || 'Não informado');
+            document.getElementById('resumo-titulo').textContent = 'Título: ' + document.getElementById('titulo').value;
+            document.getElementById('resumo-genero').textContent = 'Gênero: ' + (document.getElementById('genero').options[document.getElementById('genero').selectedIndex].text || 'Não informado');
+            document.getElementById('resumo-paginas').textContent = 'Páginas: ' + document.getElementById('paginas').value;
+            document.getElementById('resumo-formato').textContent = 'Formato: ' + (document.getElementById('formato').options[document.getElementById('formato').selectedIndex].text || 'Não informado');
+            
+            // Serviços selecionados
+            const servicosSelecionados = [];
+            document.querySelectorAll('input[name="servicos"]:checked').forEach(checkbox => {
+                servicosSelecionados.push(checkbox.parentElement.textContent.trim());
+            });
+            document.getElementById('resumo-servicos').textContent = 'Serviços: ' + (servicosSelecionados.join(', ') || 'Nenhum serviço selecionado');
+            
+            document.getElementById('resumo-descricao').textContent = 'Descrição: ' + document.getElementById('descricao').value;
+        }
+        
+        // Inicializa o formulário mostrando a primeira seção
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection(1);
+        });
+    </script>
+</body>
+</html>
