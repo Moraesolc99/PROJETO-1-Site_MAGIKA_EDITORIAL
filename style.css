@@ -610,6 +610,10 @@ footer a:hover {
     margin-bottom: 0.5rem;
 }
 
+.processo-step p {
+    text-align: left;
+}
+
 /* Diferenciais */
 .diferenciais {
     margin: 4rem 0;
