@@ -74,9 +74,7 @@ header {
 }
 
 .header-container {
-    background-color: #fff;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem;
@@ -142,7 +140,7 @@ header {
 /* ====== SEÇÕES CENTRALIZADAS ====== */
 section {
     width: 100%;
-    max-width: 800px;
+    max-width: 1400px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -257,54 +255,57 @@ footer a:hover {
 }
 
 .livro-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    width: 280px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .livros-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centraliza os cards */
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 livros por linha */
+  gap: 20px;
 }
-
 /* Container flexível para as capas */
-.capa-container {
-    width: 200px;
-    height: 280px; /* Altura fixa para alinhamento vertical */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    position: relative;
+.livro-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Estilo para as imagens das capas */
 .capa-livro {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
 }
+
 
 .livro-card:hover .capa-livro {
     transform: scale(1.05);
 }
 
 /* Informações do livro */
+
 .livro-info {
-    width: 100%;
+  padding: 10px;
+  margin-top: 0.8rem;
+}
+
+.preco {
+  font-weight: bold;
 }
 
 .livro-info h3 {
@@ -385,10 +386,6 @@ footer a:hover {
 .capa-livro {
     width: 100%;
     border-radius: 6px;
-}
-
-.livro-info {
-    margin-top: 0.8rem;
 }
 
 .livro-info h3 {
@@ -847,9 +844,9 @@ cursor: pointer;
 }
 
 :root {
-  --primary: #8B7355; /* Marrom terroso */
-  --secondary: #D4AF37; /* Dourado */
-  --light-bg: #FFF9F0; /* Bege claro */
+  --primary: #8B7355; 
+  --secondary: #D4AF37; 
+  --light-bg: #FFF9F0; 
   --dark-text: #333333;
   --light-text: #5A5A5A;
 }
@@ -922,6 +919,7 @@ input:focus, select:focus, textarea:focus {
 
 .passo.ativo::before {
   background: var(--primary);
+  color: #00ff08; /* Verde para o ✓ */
 }
 
 
@@ -953,7 +951,7 @@ input:focus, select:focus, textarea:focus {
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
-    text-align: center; /* Centraliza conteúdo interno */
+    text-align: center;
 }
 
 .contato-institucional h2 {
@@ -965,7 +963,7 @@ input:focus, select:focus, textarea:focus {
 .contato-item {
     flex: 1 1 200px;
     min-width: 220px;
-    text-align: center; /* Garante centralização individual */
+    text-align: center; 
 }
 
 .contato-item h3 {
@@ -1004,6 +1002,156 @@ input:focus, select:focus, textarea:focus {
   border-top-color: transparent;
   animation: spin 0.8s linear infinite;
   margin-left: 8px;
+}
+
+/* --- PADRÃO PARA FORMULÁRIO --- */
+.form-orcamento .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    width: 100%; 
+}
+
+.form-orcamento label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-orcamento input[type="text"],
+.form-orcamento input[type="email"],
+.form-orcamento input[type="tel"],
+.form-orcamento input[type="number"],
+.form-orcamento select,
+.form-orcamento textarea {
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* --- PADRÃO PARA SELECT (Tipo de Projeto e Gênero) --- */
+.form-orcamento select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B7355'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px; /* Espaço para a seta */
+}
+
+.form-orcamento input:required,
+.form-orcamento select:required {
+    border-left: 3px solid var(--secondary); /* Borda esquerda dourada */
+}
+
+/* Remove o outline padrão do focus */
+.form-orcamento select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+/* --- ESTILO DOS PASSOS DO ORÇAMENTO --- */
+.passos-orcamento {
+    counter-reset: step;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+
+.passo {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.passo::before {
+    content: counter(step); 
+    counter-increment: step; 
+    background: var(--secondary);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-size: 14px;
+}
+
+
+.passos-orcamento::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    z-index: 0;
+}
+
+.passo.ativo::before {
+    content: "✓"; /* Mostra ✓ quando ativo */
+    background: var(--primary);
+    color: #00ff08; /* Verde para o ✓ */
+}
+
+/* Mostra o número para passos não concluídos */
+.passo:not(.ativo)::before {
+    content: counter(step); 
+    counter-increment: step; 
+}
+
+/* Centraliza o texto abaixo do círculo */
+.passo span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.passo p {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Remove estilos extras dos spans/parágrafos */
+.passo span, .passo p {
+    margin: 0;
+    padding: 0;
+}
+
+@-moz-document url-prefix() {
+    .form-orcamento select {
+        padding-right: 12px; /* Firefox já adiciona espaço para a seta */
+    }
 }
 
 /* ============ RESPONSIVIDADE ============ */
@@ -1089,7 +1237,18 @@ input:focus, select:focus, textarea:focus {
         .header-top {
         display: none;
     }
-    
+
+    .form-orcamento input,
+    .form-orcamento select,
+    .form-orcamento textarea {
+        max-width: 100%;
+    }
+  .livros-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  max-width: none !important;
+}
+
+
     .header-main-container {
         padding: 10px;
     }
@@ -1099,7 +1258,7 @@ input:focus, select:focus, textarea:focus {
     }
     
     .logo {
-        width: 160px; /* Tamanho para tablets menores */
+        width: 160px; 
     }
     
     nav ul li a {
@@ -1151,6 +1310,12 @@ input:focus, select:focus, textarea:focus {
     }
     
     .slogan {
-        display: none; /* Opcional: esconde o slogan em mobile */
+        display: none; 
     }
+}
+
+@media (max-width: 480px) {
+  .livros-grid {
+    grid-template-columns: 1fr; 
+  }
 }
