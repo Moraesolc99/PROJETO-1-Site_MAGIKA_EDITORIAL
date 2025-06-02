@@ -1,6 +1,25 @@
-# PROJETO-1-Site_MAGIKA_EDITORIAL
-Feito para simular um site de Editora.
+# 🧙‍♂️ MAGIKA EDITORIAL
 
-Algumas features estão desativadas no momento, pois serão implementadas ao realizar a 2 etapa do projeto, onde irei incrementa-lo com JavaScript.
+Este repositório contém o desenvolvimento inicial do site da **MAGIKA EDITORIAL**, criado como parte do projeto acadêmico para a disciplina de Programação Web Front-End.
 
-Aluno: Octávio Luís Conjeo de Moraes RA: 2268108
+---
+
+## 🔗 Link do Site
+
+- **🌐 Acesse o site publicado:**  
+  [https://moraesolc99.github.io/PROJETO-1-Site_MAGIKA_EDITORIAL/](https://moraesolc99.github.io/PROJETO-1-Site_MAGIKA_EDITORIAL/)  
+  <sub>Feito para simular um site de Editora.</sub>
+
+---
+
+## 🚧 Status do Projeto
+
+⚠️ Algumas funcionalidades estão desativadas temporariamente.  
+Elas serão implementadas na **etapa 2 do projeto**, que incluirá **JavaScript** para interatividade.
+
+---
+
+## 👨‍🎓 Aluno
+
+- **Octávio Luís Conejo de Moraes**  
+  **RA:** 2268108
