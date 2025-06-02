@@ -144,7 +144,15 @@ section {
     max-width: 1400px;
     margin: 2rem auto;
     padding: 0 1rem;
+    box-sizing:border-box;
+
 }
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
 
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
@@ -401,7 +409,6 @@ footer a:hover {
     color: #666;
 }
 
-
 .contato {
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
@@ -455,8 +462,7 @@ h1 {
 .servicos-intro .subtitulo {
     color: var(--light-text);
     font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 /* --- PADRÃO PARA OS CARDS DE SERVIÇOS --- */
@@ -880,6 +886,10 @@ cursor: pointer;
   padding: 2rem;
 }
 
+.texto-orcamento {
+    text-align: center;
+}
+
 .form-group label {
   color: var(--primary);
   font-weight: 600;
@@ -981,6 +991,12 @@ input:focus, select:focus, textarea:focus {
     flex-direction: column;
     margin-bottom: 1.5rem;
     width: 53%; 
+}
+
+.form-orcamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-orcamento label {
