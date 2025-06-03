@@ -910,14 +910,19 @@ input:focus, select:focus, textarea:focus {
 
 .btn-next, .btn-submit {
   background: var(--secondary);
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
   transition: background 0.3s;
+  cursor: pointer;
 }
 .btn-next:hover {
+  background: #C9A227;
+}
+
+.btn-submit:hover {
   background: #C9A227;
 }
 
@@ -978,7 +983,7 @@ input:focus, select:focus, textarea:focus {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid white;
+  border: 2px solid rgb(58, 20, 20);
   border-radius: 50%;
   border-top-color: transparent;
   animation: spin 0.8s linear infinite;
