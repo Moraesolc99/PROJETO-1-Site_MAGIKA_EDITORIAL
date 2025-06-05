@@ -154,7 +154,7 @@ h1, h2, h3 {
 
 /* ====== FOOTER CENTRALIZADO ====== */
 footer a {
-    color: #ceb31e; /* Um amarelo dourado com bom contraste */
+    color: #ceb31e;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -221,12 +221,12 @@ footer a:hover {
 }
 
 .logo-img {
-  height: 80px; /* tam Logo */
+  height: 80px;
   width: auto;
 }
 
 .logo:hover img {
-    transform: scale(1.03); /* Efeito ao passar o mouse */
+    transform: scale(1.03);
 }
 
 .slogan {
@@ -479,7 +479,7 @@ h1 {
 .servico-card {
     display: flex;
     flex-direction: column;
-    height: 85%; /* Ocupa 100% da altura do grid */
+    height: 85%;
     padding: 2rem;
     background: linear-gradient(to bottom, #FFF9F0 0%, #FFFFFF 100%);
     border-radius: 12px;
@@ -497,13 +497,13 @@ h1 {
 /* Ícones dos Serviços */
 .servico-icon {
     width: 110px;
-    height: 62px; /* Altura menor para formato retangular */
+    height: 62px;
     margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--light-bg);
-    border-radius: 15%; /* Cantos levemente arredondados */
+    border-radius: 15%;
     border: 4px solid var(--secondary);
     overflow: hidden;
     object-fit: cover;
@@ -638,7 +638,6 @@ h1 {
     text-align: center;
 }
 
-/* Diferenciais */
 .diferenciais {
     margin: 4rem 0;
     text-align: center;
@@ -680,7 +679,6 @@ h1 {
     text-align: center;
 }
 
-/* CTA */
 .cta-servicos {
     text-align: center;
     background: linear-gradient(135deg, var(--light-bg) 0%, #352f2a 100%);
@@ -959,7 +957,7 @@ input:focus, select:focus, textarea:focus {
 
 .passo.ativo::before {
   background: var(--primary);
-  color: #00ff08; /* Verde para o ✓ */
+  color: #00ff08;
 }
 
 .contato-item p,
@@ -1021,13 +1019,13 @@ input:focus, select:focus, textarea:focus {
 .form-orcamento select,
 .form-orcamento textarea {
     width: 100%;
-    max-width: 600px; /* Ajuste conforme necessário */
+    max-width: 600px;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    box-sizing: border-box;
 }
 
 .checkbox-group {
@@ -1051,12 +1049,12 @@ input:focus, select:focus, textarea:focus {
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 16px;
-    padding-right: 36px; /* Espaço para a seta */
+    padding-right: 36px;
 }
 
 .form-orcamento input:required,
 .form-orcamento select:required {
-    border-left: 3px solid var(--secondary); /* Borda esquerda dourada */
+    border-left: 3px solid var(--secondary);
 }
 
 /* Remove o outline padrão do focus */
@@ -1110,9 +1108,9 @@ input:focus, select:focus, textarea:focus {
 }
 
 .passo.ativo::before {
-    content: "✓"; /* Mostra ✓ quando ativo */
+    content: "✓";
     background: var(--primary);
-    color: #00ff08; /* Verde para o ✓ */
+    color: #00ff08;
 }
 
 /* Mostra o número para passos não concluídos */
@@ -1146,7 +1144,7 @@ input:focus, select:focus, textarea:focus {
 
 @-moz-document url-prefix() {
     .form-orcamento select {
-        padding-right: 12px; /* Firefox já adiciona espaço para a seta */
+        padding-right: 12px;
     }
 }
 
