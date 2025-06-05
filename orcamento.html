@@ -302,7 +302,7 @@
                 <h3>Newsletter</h3>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Seu melhor email">
-                    <button type="submit" class="btn-submit">Assinar</button>
+                    <!--<button type="submit" class="btn-submit">Assinar</button>-->
                 </form>
             </div>
         </div>
@@ -311,87 +311,5 @@
             <p class="texto-orcamento">&copy; 2025 Octávio Luís Conejo de Moraes. Todos os direitos reservados.</p>
         </div>
     </footer>
-</body>
-
-    <script>
-        // Funções para navegação entre seções do formulário
-        function showSection(sectionNumber) {
-            // Esconde todas as seções
-            document.querySelectorAll('.form-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Mostra a seção desejada
-            document.getElementById('section' + sectionNumber).classList.add('active');
-            
-            // Atualiza os passos
-            document.querySelectorAll('.passo').forEach((passo, index) => {
-                passo.classList.remove('ativo');
-                if (index < sectionNumber) {
-                    passo.classList.add('ativo');
-                }
-            });
-        }
-        
-        function nextSection(currentSection) {
-            // Valida os campos obrigatórios antes de avançar
-            let isValid = true;
-            const currentSectionEl = document.getElementById('section' + currentSection);
-            const requiredFields = currentSectionEl.querySelectorAll('[required]');
-            
-            requiredFields.forEach(field => {
-                if (!field.value) {
-                    field.classList.add('error');
-                    isValid = false;
-                } else {
-                    field.classList.remove('error');
-                }
-            });
-            
-            if (!isValid) {
-                alert('Por favor, preencha todos os campos obrigatórios antes de continuar.');
-                return;
-            }
-            
-            // Atualiza o resumo na seção 3
-            if (currentSection === 2) {
-                updateResumo();
-            }
-            
-            showSection(currentSection + 1);
-        }
-        
-        function prevSection(currentSection) {
-            showSection(currentSection - 1);
-        }
-        
-        function updateResumo() {
-            // Atualiza os dados do resumo
-            document.getElementById('resumo-nome').textContent = 'Nome: ' + document.getElementById('nome').value;
-            document.getElementById('resumo-email').textContent = 'Email: ' + document.getElementById('email').value;
-            document.getElementById('resumo-telefone').textContent = 'Telefone: ' + document.getElementById('telefone').value;
-            document.getElementById('resumo-empresa').textContent = 'Empresa: ' + (document.getElementById('empresa').value || 'Não informado');
-            
-            document.getElementById('resumo-tipo').textContent = 'Tipo: ' + (document.getElementById('tipo-projeto').options[document.getElementById('tipo-projeto').selectedIndex].text || 'Não informado');
-            document.getElementById('resumo-titulo').textContent = 'Título: ' + document.getElementById('titulo').value;
-            document.getElementById('resumo-genero').textContent = 'Gênero: ' + (document.getElementById('genero').options[document.getElementById('genero').selectedIndex].text || 'Não informado');
-            document.getElementById('resumo-paginas').textContent = 'Páginas: ' + document.getElementById('paginas').value;
-            document.getElementById('resumo-formato').textContent = 'Formato: ' + (document.getElementById('formato').options[document.getElementById('formato').selectedIndex].text || 'Não informado');
-            
-            // Serviços selecionados
-            const servicosSelecionados = [];
-            document.querySelectorAll('input[name="servicos"]:checked').forEach(checkbox => {
-                servicosSelecionados.push(checkbox.parentElement.textContent.trim());
-            });
-            document.getElementById('resumo-servicos').textContent = 'Serviços: ' + (servicosSelecionados.join(', ') || 'Nenhum serviço selecionado');
-            
-            document.getElementById('resumo-descricao').textContent = 'Descrição: ' + document.getElementById('descricao').value;
-        }
-        
-        // Inicializa o formulário mostrando a primeira seção
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection(1);
-        });
-    </script>
 </body>
 </html>
