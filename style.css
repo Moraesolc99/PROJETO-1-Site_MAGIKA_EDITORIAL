@@ -66,14 +66,13 @@ header {
 }
 
 .header-container {
-    position: relative; /* Permite que o ::before seja posicionado em relação a ele */
-    padding: 1rem;
+    position: relative; 
     margin: 0 auto;
-    width: calc(100% - 4rem); /* Ajusta a largura considerando o padding */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-    overflow: hidden; /* Evita vazamentos */
+    width: calc(100% - 4rem);
+    box-sizing: border-box; 
+    overflow: hidden; 
     border-width: auto;
-    max-width: 1900px; /* Ou o tamanho máximo do seu layout */
+    max-width: 1900px; 
     border: 2rem;
 }
 
@@ -264,7 +263,7 @@ footer a:hover {
 
 .livros-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 livros por linha */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 /* Container flexível para as capas */
