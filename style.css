@@ -5,14 +5,7 @@ p, li {
     color: #ffdec2;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    text-align: justify;
-    margin: 0;
-    padding: 0;
-}
+
 
 main {
     flex: 1;
@@ -72,28 +65,30 @@ header {
     background: linear-gradient(135deg, #FFF9F0 0%, #FFFFFF 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
 }
 
 .header-container {
-    padding: 1rem 2rem;
-    max-width: 1200px;
+    position: relative; /* Permite que o ::before seja posicionado em relação a ele */
+    padding: 1rem;
     margin: 0 auto;
-    padding: 1rem 2rem;
-
-}
-
-.header-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    width: calc(100% - 4rem); /* Ajusta a largura considerando o padding */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    overflow: hidden; /* Evita vazamentos */
+    border-width: auto;
+    max-width: 1900px; /* Ou o tamanho máximo do seu layout */
+    border: 2rem;
 }
 
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* <- agora centralizado */
-  gap: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    max-width: 1900px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .header-top {
@@ -162,11 +157,6 @@ h1, h2, h3 {
 }
 
 /* ====== FOOTER CENTRALIZADO ====== */
-footer {
-    background: linear-gradient(to bottom, #333333 0%, #222222 100%);
-    
-}
-
 footer a {
     color: #ceb31e; /* Um amarelo dourado com bom contraste */
     font-weight: bold;
@@ -205,7 +195,7 @@ footer a:hover {
 .footer-bottom {
     text-align: center;
     padding: 1rem;
-    background: #222;
+    background: #22222256;
     font-size: 0.9rem;
 }
 
@@ -360,6 +350,19 @@ footer a:hover {
 .servicos-lista ul {
     list-style: none;
     padding: 0;
+    max-width: 250px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.05rem;
+
+}
+
+.historia {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.05rem;
+
 }
 
 .servicos-lista li {
@@ -410,30 +413,34 @@ footer a:hover {
 }
 
 .contato {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 5rem;
     font-size: 0.9rem;
     color: #444;
-    border-top: 1px solid #ffdec2;
+    border-top: 1px solid #363636;
     text-align: center;
     margin-top: 2rem;
 }
 
 .contato h2 {
     font-size: 1.1rem;
-    color:#ffdec2;
+    color:#522c00;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .contato-info p {
     margin: 0.2rem 0;
     line-height: 1.4;
+    font-weight: bold;
 }
 
 .contato-info a {
-    color:#ffdec2;
+    color:#ffdb8f;
     text-decoration: none;
+    font-weight: bold;
+    
 }
 
 .contato-info a:hover {
@@ -493,17 +500,17 @@ h1 {
 
 /* Ícones dos Serviços */
 .servico-icon {
-    width: 120px;
-    height: 80px; /* Altura menor para formato retangular */
+    width: 110px;
+    height: 62px; /* Altura menor para formato retangular */
     margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--light-bg);
-    border-radius: 8px; /* Cantos levemente arredondados */
-    border: 2px solid var(--secondary);
-    padding: 15px;
+    border-radius: 15%; /* Cantos levemente arredondados */
+    border: 4px solid var(--secondary);
     overflow: hidden;
+    object-fit: cover;
 }
 
 .servico-icon img {
@@ -965,6 +972,7 @@ input:focus, select:focus, textarea:focus {
     text-align: center;
     color: #444444;
     text-decoration: none;
+    
 }
 
 .contato-item a:hover {
@@ -1165,6 +1173,10 @@ input:focus, select:focus, textarea:focus {
     .header-container {
         padding: 0 1.5rem;
     }
+
+  .header-inner {
+    flex-wrap: nowrap;
+  }
 }
 
 @media (max-width: 992px){
@@ -1428,60 +1440,67 @@ input:focus, select:focus, textarea:focus {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238B7355"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>');
 }
 
-
-
-
-
-
-
 /* --- TEMA GERAL DO SITE --- */
 body {
-    background-color: #121212; /* Preto sofisticado */
-    background-image: 
-        linear-gradient(rgba(139, 115, 85, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(139, 115, 85, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px; /* Textura sutil */
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     min-height: 100vh;
-    position: relative;
+    
+    /* Background com tamanho manual e posição fixa */
+    background: 
+        url('imagens/textura-papel.png') no-repeat center center fixed,
+        linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9));
+    
+    /* Ajuste manual do tamanho (exemplo com 80% de largura e altura) */
+    background-size: 110% 150%; /* Você pode usar px, %, ou outros valores */
+    
+    /* Centraliza e fixa o background */
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Garante que o padding não interfira */
     box-sizing: border-box;
+    overflow: auto;
+    position: relative;
 }
 
-/* Moldura decorativa */
+/* Moldura FIXA (sem afetar o scrolling) */
 body::before {
     content: "";
-    position: fixed;
+    position: fixed; /* Fica fixa na viewport */
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border: 2px solid #8B7355; /* Marrom dourado */
+    border: 2px solid #8B7355;
     border-radius: 8px;
-    pointer-events: none;
-    z-index: -1;
-    box-shadow: 0 0 30px rgba(139, 115, 85, 0.3);
+    pointer-events: none; /* Permite interação com o conteúdo */
+    z-index: 9999;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    
+    /* Garante que a moldura não gere scrolling */
+    overflow: hidden;
 }
 
 /* Ajuste para o conteúdo principal */
 main {
-    background-color: rgba(30, 30, 30, 0.9); /* Fundo escuro semi-transparente */
+    background-color: rgba(30, 30, 30, 0.966); /* Fundo escuro semi-transparente */
     border-radius: 6px;
     padding: 2rem;
     margin: 20px auto;
     max-width: 1200px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgb(0, 0, 0);
 }
 
 /* Ajuste para o header */
 header {
-    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(50, 50, 50, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.966) 0%, rgba(43, 43, 43, 0.973) 100%);
     border-bottom: 1px solid #8B7355;
 }
 
 /* Ajuste para o footer */
 footer {
-    background: linear-gradient(to bottom, #121212 0%, #000000 100%);
+    background: linear-gradient(to bottom, #121212d5 0%, #000000 100%);
     border-top: 1px solid #8B7355;
 }
 
@@ -1494,7 +1513,7 @@ footer {
 }
 
 /* Textos claros para contraste */
-body, h1, h2, h3, p, li {
+h1, h2, h3, p, li {
     color: #E0E0E0;
 }
 
@@ -1524,9 +1543,10 @@ a:hover {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 5px;
+        min-height: calc(100vh - 10px);
+        min-width: calc(100vw - 10px);
     }
-    
     body::before {
         top: 5px;
         left: 5px;
@@ -1540,12 +1560,22 @@ a:hover {
     }
 }
 
-body {
-    background: 
-        url('imagens/textura-papel.jpg') center/cover no-repeat,
-        linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9));
-}
+
 
 p, .preco, li, a {
     text-decoration-color: #ffdec2;
+}
+
+.texto-orcamento ul {
+  list-style-position: inside; /* Alinha os marcadores com o texto */
+  padding-left: 0; /* Remove padding padrão da lista */
+  text-align: center; /* Centraliza o texto dos itens */
+  margin: 0 auto; /* Centraliza a lista no container */
+  display: table; /* Permite centralização precisa */
+}
+
+.texto-orcamento li {
+  text-align: center; /* Centraliza o texto do item */
+  margin: 0.5rem 0; /* Espaçamento entre itens */
+  list-style-type: none; /* Remove marcadores se preferir */
 }
