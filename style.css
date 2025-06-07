@@ -57,7 +57,7 @@ main {
     white-space: nowrap;
 }
 
-/* ============ ESTILOS DO HEADER ============ */
+/* ============ HEADER ============ */
 header {
     background: linear-gradient(135deg, #FFF9F0 0%, #FFFFFF 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -129,7 +129,7 @@ header {
     margin-left: auto;
 }
 
-/* ====== SEÇÕES CENTRALIZADAS ====== */
+/* ====== SEÇÕES ====== */
 section {
     width: 100%;
     max-width: 1400px;
@@ -152,7 +152,7 @@ h1, h2, h3 {
     color: white;
 }
 
-/* ====== FOOTER CENTRALIZADO ====== */
+/* ====== FOOTER ====== */
 footer a {
     color: #ceb31e;
     font-weight: bold;
@@ -240,7 +240,7 @@ footer a:hover {
     padding-right: 2rem;
 }
 
-/* ============ PADRONIZAÇÃO DAS CAPAS ============ */
+/* ============ CAPAS ============ */
 .livros-destaque {
     display: flex;
     flex-wrap: wrap;
@@ -266,7 +266,7 @@ footer a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
-/* Container flexível para as capas */
+
 .livro-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -279,7 +279,6 @@ footer a:hover {
   text-align: center;
 }
 
-/* Estilo para as imagens das capas */
 .capa-livro {
   width: 100%;
   height: auto;
@@ -291,8 +290,6 @@ footer a:hover {
 .livro-card:hover .capa-livro {
     transform: scale(1.05);
 }
-
-/* Informações do livro */
 
 .livro-info {
   padding: 10px;
@@ -444,7 +441,7 @@ footer a:hover {
 }
 
 
-/* ============ SEÇÃO SERVIÇOS ============ */
+/* ============ SERVIÇOS ============ */
 .servicos {
     max-width: 1200px;
     margin: 0 auto;
@@ -468,7 +465,6 @@ h1 {
     text-align: center;
 }
 
-/* --- PADRÃO PARA OS CARDS DE SERVIÇOS --- */
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -494,7 +490,6 @@ h1 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Ícones dos Serviços */
 .servico-icon {
     width: 110px;
     height: 62px;
@@ -580,8 +575,6 @@ h1 {
 .btn-servico:hover {
     background: var(--primary);
 }
-
-/* Processo Editorial */
 .processo-editorial {
     background: var(--light-bg);
     padding: 3rem 2rem;
@@ -765,7 +758,6 @@ nav ul {
   background-color: #333;
   color: #fff;
 }
-
 
 .whatsapp-btn a {
     background-color: #139442;
@@ -992,7 +984,7 @@ input:focus, select:focus, textarea:focus {
   margin-left: 8px;
 }
 
-/* --- PADRÃO PARA FORMULÁRIO --- */
+/* --- FORMULÁRIO --- */
 .form-orcamento .form-group {
     display: flex;
     flex-direction: column;
@@ -1042,7 +1034,7 @@ input:focus, select:focus, textarea:focus {
     color: #ffdec2;
 }
 
-/* --- PADRÃO PARA SELECT (Tipo de Projeto e Gênero) --- */
+/* --- SELECT (Tipo de Projeto e Gênero) --- */
 .form-orcamento select {
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B7355'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
@@ -1057,14 +1049,12 @@ input:focus, select:focus, textarea:focus {
     border-left: 3px solid var(--secondary);
 }
 
-/* Remove o outline padrão do focus */
 .form-orcamento select:focus {
     outline: none;
     border-color: var(--secondary);
     box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 
-/* --- ESTILO DOS PASSOS DO ORÇAMENTO --- */
 .passos-orcamento {
     counter-reset: step;
     display: flex;
@@ -1095,7 +1085,6 @@ input:focus, select:focus, textarea:focus {
     font-size: 14px;
 }
 
-
 .passos-orcamento::before {
     content: "";
     position: absolute;
@@ -1113,13 +1102,11 @@ input:focus, select:focus, textarea:focus {
     color: #00ff08;
 }
 
-/* Mostra o número para passos não concluídos */
 .passo:not(.ativo)::before {
     content: counter(step); 
     counter-increment: step; 
 }
 
-/* Centraliza o texto abaixo do círculo */
 .passo span {
     display: block;
     text-align: center;
@@ -1136,7 +1123,6 @@ input:focus, select:focus, textarea:focus {
     color: var(--primary);
 }
 
-/* Remove estilos extras dos spans/parágrafos */
 .passo span, .passo p {
     margin: 0;
     padding: 0;
@@ -1318,7 +1304,7 @@ input:focus, select:focus, textarea:focus {
   }
 }
 
-/* --- ESTILIZAÇÃO DA SEÇÃO "NOSSO ESPAÇO" --- */
+/* --- NOSSO ESPAÇO --- */
 .contato-institucional {
     background: linear-gradient(135deg, #161616cc 0%, #534f4759 100%);
     padding: 3rem 1rem;
@@ -1396,7 +1382,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Estilo para os links de redes sociais */
 .contato-item:nth-child(3) a {
     background: #f0e2d6;
     padding: 6px 12px;
@@ -1434,51 +1419,44 @@ input:focus, select:focus, textarea:focus {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238B7355"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>');
 }
 
-/* --- TEMA GERAL DO SITE --- */
+/* --- TEMA GERAL --- */
 body {
     margin: 0;
     padding: 10px;
     min-height: 100vh;
     
-    /* Background com tamanho manual e posição fixa */
     background: 
         url('imagens/textura-papel.png') no-repeat center center fixed,
         linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9));
     
-    /* Ajuste manual do tamanho (exemplo com 80% de largura e altura) */
-    background-size: 110% 150%; /* Você pode usar px, %, ou outros valores */
+    background-size: 110% 150%;
     
-    /* Centraliza e fixa o background */
     background-position: center;
     background-attachment: fixed;
     
-    /* Garante que o padding não interfira */
     box-sizing: border-box;
     overflow: auto;
     position: relative;
 }
 
-/* Moldura FIXA (sem afetar o scrolling) */
 body::before {
     content: "";
-    position: fixed; /* Fica fixa na viewport */
+    position: fixed; 
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
     border: 2px solid #8B7355;
     border-radius: 8px;
-    pointer-events: none; /* Permite interação com o conteúdo */
+    pointer-events: none; 
     z-index: 9999;
     box-shadow: 0 0 30px rgb(0, 0, 0);
     
-    /* Garante que a moldura não gere scrolling */
     overflow: hidden;
 }
 
-/* Ajuste para o conteúdo principal */
 main {
-    background-color: rgba(30, 30, 30, 0.966); /* Fundo escuro semi-transparente */
+    background-color: rgba(30, 30, 30, 0.966); 
     border-radius: 6px;
     padding: 2rem;
     margin: 20px auto;
@@ -1486,42 +1464,37 @@ main {
     box-shadow: 0 4px 20px rgb(0, 0, 0);
 }
 
-/* Ajuste para o header */
 header {
     background: linear-gradient(135deg, rgba(30, 30, 30, 0.966) 0%, rgba(43, 43, 43, 0.973) 100%);
     border-bottom: 1px solid #8B7355;
 }
 
-/* Ajuste para o footer */
 footer {
     background: linear-gradient(to bottom, #121212d5 0%, #000000 100%);
     border-top: 1px solid #8B7355;
 }
 
 :root {
-    --primary: #D4AF37; /* Dourado mais vibrante */
-    --secondary: #8B7355; /* Marrom principal */
-    --light-bg: rgba(30, 30, 30, 0.8); /* Fundo escuro */
-    --dark-text: #E0E0E0; /* Texto claro */
-    --light-text: #B0B0B0; /* Texto secundário */
+    --primary: #D4AF37; 
+    --secondary: #8B7355; 
+    --light-bg: rgba(30, 30, 30, 0.8); 
+    --dark-text: #E0E0E0; 
+    --light-text: #B0B0B0; 
 }
 
-/* Textos claros para contraste */
 h1, h2, h3, p, li {
     color: #E0E0E0;
 }
 
-/* Links destacados */
 a {
     color: var(--primary);
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #F5D07C; /* Dourado mais claro */
+    color: #F5D07C;
 }
 
-/* Brilho nos elementos interativos */
 .nav-list li a:hover,
 .btn-servico:hover,
 .btn-cta:hover {
@@ -1529,7 +1502,6 @@ a:hover {
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/* Borda decorativa para cards */
 .servico-card, .livro-card {
     border: 1px solid rgba(139, 115, 85, 0.3);
     background: rgba(40, 40, 40, 0.7);
@@ -1554,22 +1526,20 @@ a:hover {
     }
 }
 
-
-
 p, .preco, li, a {
     text-decoration-color: #ffdec2;
 }
 
 .texto-orcamento ul {
-  list-style-position: inside; /* Alinha os marcadores com o texto */
-  padding-left: 0; /* Remove padding padrão da lista */
-  text-align: center; /* Centraliza o texto dos itens */
-  margin: 0 auto; /* Centraliza a lista no container */
-  display: table; /* Permite centralização precisa */
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: center;
+  margin: 0 auto;
+  display: table;
 }
 
 .texto-orcamento li {
-  text-align: center; /* Centraliza o texto do item */
-  margin: 0.5rem 0; /* Espaçamento entre itens */
-  list-style-type: none; /* Remove marcadores se preferir */
+  text-align: center;
+  margin: 0.5rem 0;
+  list-style-type: none;
 }
